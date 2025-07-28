@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreenath Mehta - Personal Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Ubuntu Mono for terminal feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="shadow-md fixed w-full z-10 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center rounded-b-lg">
+            <div class="flex-shrink-0">
+                <a href="#home" class="text-2xl font-extrabold logo-text p-2 hover:bg-gray-800 transition duration-300">Shreenath Mehta</a>
+            </div>
+            <!-- Full navigation links for large screens -->
+            <div class="hidden lg:block">
+                <div class="ml-10 flex items-baseline space-x-6">
+                    <a href="#home" class="nav-link px-3 py-2 rounded-md text-lg font-medium">Home</a>
+                    <a href="#about" class="nav-link px-3 py-2 rounded-md text-lg font-medium">About</a>
+                    <a href="#skills" class="nav-link px-3 py-2 rounded-md text-lg font-medium">Skills</a>
+                    <a href="#projects" class="nav-link px-3 py-2 rounded-md text-lg font-medium">Projects</a>
+                    <a href="#certifications" class="nav-link px-3 py-2 rounded-md text-lg font-medium">Certifications</a>
+                    <a href="#experience" class="nav-link px-3 py-2 rounded-md text-lg font-medium">Experience</a>
+                    <a href="#education" class="nav-link px-3 py-2 rounded-md text-lg font-medium">Education</a>
+                    <a href="#contact" class="nav-link px-3 py-2 rounded-md text-lg font-medium">Contact</a>
+                </div>
+            </div>
+            <!-- Mobile menu button for small and medium screens -->
+            <div class="-mr-2 flex lg:hidden">
+                <button id="mobile-menu-button" type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-lime-400 hover:text-cyan-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-400" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Icon when menu is closed. -->
+                    <svg class="hamburger-icon block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- Icon when menu is open. -->
+                    <svg class="close-icon hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu content, shown/hidden by JS -->
+        <div class="hidden lg:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="nav-link hover:bg-gray-700 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="nav-link hover:bg-gray-700 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#skills" class="nav-link hover:bg-gray-700 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#projects" class="nav-link hover:bg-gray-700 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#certifications" class="nav-link hover:bg-gray-700 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Certifications</a>
+                <a href="#experience" class="nav-link hover:bg-gray-700 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#education" class="nav-link hover:bg-gray-700 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Education</a>
+                <a href="#contact" class="nav-link hover:bg-gray-700 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center text-white section-padding pt-24">
+        <div class="text-center max-w-4xl mx-auto px-4">
+            <img 
+    src="pic.jpg" 
+    alt="Shreenath Mehta" 
+    class="w-[250px] h-[250px] rounded-full mx-auto mb-6 border-4 border-lime-400 shadow-lg"
+/>
+
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+                <span class="text-highlight">user@shreenath-pc:~$</span> <span class="text-white">./run_portfolio.sh</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light text-content">
+                A passionate B.Tech student exploring the exciting world of hardware-software integration, generative AI, and web development.
+            </p>
+            <a href="#projects" class="btn-primary text-lg font-semibold inline-block rounded-full shadow-lg hover:shadow-xl">
+                ls -l projects/
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center section-title mb-12">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-lg text-content space-y-4">
+                    <p>I'm Shreenath Mehta, a first-year B.Tech student at Poornima Institute of Engineering and Technology, Jaipur. I’m deeply interested in hardware-software integration, generative AI, and web development.</p>
+                    <p>I love creating innovative solutions — from smart clocks to Galaxy Control system — that blend creativity with real-world utility. My journey is driven by curiosity, learning, and the joy of building.</p>
+                    <h3 class="text-2xl font-semibold text-highlight mt-8 mb-4">Quick Details:</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><span class="font-medium">🏫 College:</span> PIET Jaipur</li>
+                        <li><span class="font-medium">📍 Location:</span> Jaipur, Rajasthan, India</li>
+                        <li><span class="font-medium">🎯 Interests:</span> Web Dev, IoT, AI, Cybersecurity</li>
+                        <li><span class="font-medium">💪 Strength:</span> Working with passion and consistency</li>
+                    </ul>
+                </div>
+                <div class="flex justify-center">
+                    <img 
+    src="dev.gif" 
+    alt="About Me Illustration" 
+    class="w-[400px] h-[500px] rounded-xl border-2 border-lime-400 shadow-lg transform hover:scale-105 transition duration-300"
+/>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center section-title mb-12">Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend Skills -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-highlight mb-4">Frontend</h3>
+                    <ul class="space-y-2 text-content">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <!-- Backend Skills -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-highlight mb-4">Backend</h3>
+                    <ul class="space-y-2 text-content">
+                        <li>Flask (basic knowledge)</li>
+                    </ul>
+                </div>
+                <!-- Programming Languages -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-highlight mb-4">Programming</h3>
+                    <ul class="space-y-2 text-content">
+                        <li>Python</li>
+                        <li>C</li>
+                    </ul>
+                </div>
+                <!-- Hardware Skills -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-highlight mb-4">Hardware</h3>
+                    <ul class="space-y-2 text-content">
+                        <li>ESP32</li>
+                        <li>c++</li>
+                        
+                    </ul>
+                </div>
+                <!-- AI Skills -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-highlight mb-4">AI</h3>
+                    <ul class="space-y-2 text-content">
+                        <li>Generative AI (beginner)</li>
+                        <li>Prompt Engineering</li>
+                    </ul>
+                </div>
+                <!-- Tools -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-highlight mb-4">Tools</h3>
+                    <ul class="space-y-2 text-content">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center section-title mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Galaxy control -->
+                <div  class="card p-6">
+    <h3 class="text-2xl font-semibold text-white mb-3">
+        Galaxy Control  
+        <span class="text-sm text-highlight">(2nd rank at Nebula Nexus Hackathon)</span>
+    </h3>
+    <p class="text-content mb-4">
+        GalaxyControl is an advanced, interactive, and visually dynamic web application designed to simulate a futuristic space mission control center. It offers an immersive experience reminiscent of real-world space agencies like NASA or SpaceX.
+    </p>
+    <p class="text-sm text-secondary font-medium mb-4">Tech: HTML, CSS and JS </p>
+
+    <a href="https://galaxy-control.vercel.app/" target="_blank" rel="noopener noreferrer"
+       class="inline-block bg-lime-500 text-white font-semibold py-2 px-4 rounded hover:bg-lime-600 transition">
+        🔗 Preview
+    </a>
+</div>
+                <!-- Project 2: Instagram Follower Notifier -->
+                <div class="card p-6">
+    <h3 class="text-2xl font-semibold text-white mb-3">Vote To Earn</h3>
+    <p class="text-content mb-4">
+        This Solidity-based smart contract introduces a decentralized voting system where participants are incentivized to vote using token rewards.
+    </p>
+    <p class="text-sm text-secondary font-medium mb-4">Tech: HTML, CSS, Solidity</p>
+    <a href="https://vote-to-earn-shree.vercel.app/" target="_blank" class="inline-block bg-lime-500 text-white font-semibold py-2 px-4 rounded hover:bg-lime-600 transition">🔗 Preview</a>
+</div>
+
+                <!-- Project 3: Toggle Smart (Home Automation + Chatbot) -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-3">Toggle Smart (Home Automation + Chatbot)</h3>
+                    <p class="text-content mb-4">IoT project that controls appliances via mobile. Integrated with chatbot “Raven” for smart responses.</p>
+                    <p class="text-sm text-secondary font-medium">Tech: IoT, Web, AI Chatbot</p>
+                </div>
+                <!-- Project 4: -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-3">Smart Clock ( Hardware) </h3>
+                    <p class="text-content mb-4">ESP32-powered clock showing real-time time, temperature, and motivational thoughts with web-based alarm setup.</p>
+                    <p class="text-sm text-secondary font-medium">Tech: ESP32, OLED, C++, WiFi</p>
+                    
+                </div>
+
+                <!-- Project 5:  -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-3">Tokenized Debt Management</h3>
+                    <p class="text-content mb-4">A decentralized application (dApp) built on the Stellar blockchain for leasing physical or digital assets.</p>
+                    <p class="text-sm text-secondary font-medium">Tech: HTML, CSS, Rust, AI , Claude </p>
+                </div>
+                <!-- project 6  -->
+                   <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-3">Travel Coin Generator</h3>
+                    <p class="text-content mb-4">This innovative project falls under "fintech and tourism" and aims to encourage tourism in India by rewarding visitors with digital coins when they visit famous locations across the country! </p>
+                    <p class="text-sm text-secondary font-medium">Tech: HTML, CSS ,JS </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center section-title mb-12">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- C1 -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-3"> 🏅 2nd Rank – Nebula Nexus </h3>
+                    <p class="text-content mb-4">Secured 2nd Prize in the overall category for demonstrating outstanding creativity and excellence in a competitive, innovation-driven science and technology event.</p>
+                    <p class="text-sm text-secondary font-medium">Organized by: COSMOS – The Science Club, Manipal University Jaipur</p>
+                </div>
+                <!-- C2 -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-3">Career Essentials in Generative AI</h3>
+                    <p class="text-content mb-4">Gained proficiency in HTML, CSS, and JavaScript for building responsive web interfaces.</p>
+                    <p class="text-sm text-secondary font-medium">Issued by: Microsoft & LinkedIn Learning | Date: August 2024</p>
+                    </div>
+                    <!-- C3 -->
+                     <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-3">Digital Campus 2.0 – Google Cloud HackSprint</h3>
+                    <p class="text-content mb-4">Gained proficiency in HTML, CSS, and JavaScript for building responsive web interfaces.</p>
+                    <p class="text-sm text-secondary font-medium">Organized by: Google Cloud & PIET Jaipur | Date: November 2024</p>
+                </div>
+                <!-- C4 -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-3">Introduction to Ethical Hacking</h3>
+                    <p class="text-content mb-4">Successfully completed the “Introduction to Ethical Hacking” course offered by Great Learning Academy.</p>
+                    <p class="text-sm text-secondary font-medium">Issued by: Great Learning Academy</p>
+                </div>
+                <!-- C5 -->
+                   <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-3"> UDHBHAV 2024 – National Level Project Exhibition</h3>
+                    <p class="text-content mb-4">Awarded to Shreenath Mehta for successful participation in UDHBHAV-2024, the 3rd National Level Project Exhibition organized by PIET .</p>
+                    <p class="text-sm text-secondary font-medium">Organized by: Poornima Institution’s Innovation Council (PIIC)</p>
+                </div>
+                <!-- C6 -->
+                   <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-3">Cyber Security Awareness Quiz</h3>
+                    <p class="text-content mb-4">Successfully completed the Cyber Security Awareness Quiz organized by MyGov in collaboration with Digital India (DSC), aimed at promoting online safety and cyber hygiene.</p>
+                    <p class="text-sm text-secondary font-medium">Issued by: MyGov & Digital India | Date: October 2024</p>
+                </div>
+                <!-- Add more certifications as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center section-title mb-12">Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- E1 -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Research Intern</h3>
+                    <p class="text-highlight text-lg mb-2">Digital Hammer</p>
+                    <p class="text-content mb-4">Successfully completed a research internship focused on the integration of Artificial Intelligence and Blockchain in the healthcare sector.</p>
+                    <p class="text-sm text-secondary font-medium">June 2024 - July 2024 (20 Days) </p>
+                </div>
+                <!-- E2 -->
+                   <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-2"> Contributor </h3>
+                    <p class="text-highlight text-lg mb-2">GirlScript Summer of Code (GSSoC) 2025</p>
+                    <p class="text-content mb-4">Proudly selected as a Contributor for GirlScript Summer of Code 2025, a prestigious national-level open-source program aimed at promoting inclusive participation in software development.</p>
+                    <p class="text-sm text-secondary font-medium">July 2025 - Present </p>
+                </div>
+                <!-- E3 -->
+                <div class="card p-6">
+                    <h3 class="text-2xl font-semibold text-white mb-2"> Internshala Student Partner </h3>
+                    <p class="text-highlight text-lg mb-2">Internshala</p>
+                    <p class="text-content mb-4">Selected as an Internshala Student Partner (ISP) as part of a competitive national program that recognizes and empowers student leaders across India.</p>
+                    <p class="text-sm text-secondary font-medium">January 2025 - March 2025</p>
+                </div>
+                <!-- Add more experience entries as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center section-title mb-12">Education</h2>
+            <div class="card p-8 max-w-2xl mx-auto text-center">
+                <h3 class="text-3xl font-semibold text-highlight mb-2">B.Tech in Computer Science</h3>
+                <p class="text-content text-xl mb-4">Poornima Institute of Engineering and Technology, Jaipur</p>
+                <p class="text-lg text-secondary">📅 2024 – 2028</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold section-title mb-6">Get in Touch</h2>
+            <p class="text-xl text-content mb-8">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <a href="mailto:shreenath32s33@gmail.com" class="btn-primary text-lg font-semibold inline-block bg-white text-indigo-600 hover:bg-gray-100 rounded-full shadow-lg hover:shadow-xl mr-4 mb-4 md:mb-0">
+                Email Me
+            </a>
+            <div class="mt-8 flex justify-center space-x-6">
+                <a href="https://github.com/Shreenathmehta32" target="_blank" rel="noopener noreferrer" class="text-lime-400 hover:text-cyan-400 transition duration-300">
+                    <!-- GitHub SVG Icon -->
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.686-.208.686-.467 0-.23-.009-.846-.014-1.659-2.782.603-3.37-1.34-3.37-1.34-.454-1.154-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.39-1.993 1.029-2.697-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.099 2.65.64.704 1.028 1.599 1.028 2.697 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .26.216.559.692.462A10.01 10.01 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/shreenath-mehta-b12880255/" target="_blank" rel="noopener noreferrer" class="text-lime-400 hover:text-cyan-400 transition duration-300">
+                    <!-- LinkedIn SVG Icon -->
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://discord.gg/HC4vyy9c8z" target="_blank" rel="noopener noreferrer" class="text-lime-400 hover:text-cyan-400 transition duration-300">
+                    <!-- Correct Discord SVG Icon -->
+<svg class="w-8 h-8 text-indigo-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <path d="M20.317 4.3698a19.7913 19.7913 0 0 0-4.8851-1.5152.0741.0741 0 0 0-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 0 0-.0785-.0371A19.7363 19.7363 0 0 0 3.677 4.3698a.0699.0699 0 0 0-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 0 0 .0312.0561 19.8886 19.8886 0 0 0 5.9954 3.0589.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 0 0-.0416-.1057 13.1387 13.1387 0 0 1-1.872-1.1057.077.077 0 0 1-.0076-.1276c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 0 1 .0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 0 1 .0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 0 1-.0066.1276 12.2986 12.2986 0 0 1-1.873.1057.0766.0766 0 0 0-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.077.077 0 0 0 .0842.0286 19.911 19.911 0 0 0 6.0022-3.0599.077.077 0 0 0 .0313-.0552c.5004-5.177-.8382-9.6739-3.5497-13.6606a.061.061 0 0 0-.0312-.0286ZM8.0202 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189Zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+</svg>
+
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center rounded-t-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p><span class="text-highlight">shreenath-pc:~$</span> <span class="text-white">cat /etc/copyright</span></p>
+           <p class="mt-2 text-sm text-secondary">
+  &copy; 2024 
+  <a 
+    href="https://www.linkedin.com/in/shreenath-mehta-b12880255/" 
+    class="text-blue-500 hover:underline" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Shreenath Mehta
+  </a>. All rights reserved.
+</p>
+
+            <p class="mt-1 text-sm text-secondary">Built with <span class="text-red-500">❤️</span> and passion.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
